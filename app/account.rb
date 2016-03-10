@@ -1,5 +1,5 @@
 class Account
-  attr_reader :value
+  attr_reader :value, :owner
   attr_accessor :transactions
   def initialize(owner)
     @owner = owner

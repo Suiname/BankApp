@@ -16,5 +16,13 @@ class Bank
     end
   end
 
-
+  def customers
+    @customers = []
+    @accounts.each do |account|
+      if !(@customers.include? account.owner)
+        @customers.push(account.owner)
+      end
+    end
+    @customers
+  end
 end
