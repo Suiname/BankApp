@@ -1,7 +1,8 @@
 require_relative '../app/account'
+require_relative '../app/person'
 
 describe Account do
-  let(:acc) { Account.new("John Doe") }
+  let(:acc) { Account.new(Person.new("John","Doe")) }
   describe '#value' do
     it 'has an initial value of zero dollars' do
       expect(acc.value).to eq 0.00
