@@ -1,7 +1,8 @@
 class Account
   attr_reader :value
   attr_accessor :transactions
-  def initialize()
+  def initialize(owner)
+    @owner = owner
     @value = 0.00
     @transactions = []
   end
