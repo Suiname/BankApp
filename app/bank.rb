@@ -25,4 +25,12 @@ class Bank
     end
     @customers
   end
+
+  def balance
+    @balance = []
+    @accounts.each do |account|
+      @balance.push(account.value)
+    end
+    @balance
+  end
 end

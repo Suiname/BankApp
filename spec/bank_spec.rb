@@ -41,6 +41,16 @@ describe Bank do
         expect(bank.customers).to eq [person1, person2]
       end
     end
+  end
+  describe '#balance' do
+    context 'have many accounts to check the balances' do
+      before do
+        bank.accounts(account1, account2, account3)
+      end
+      it 'can see the balance of all accounts' do
+        expect(bank.balance).to eq [0.00, 0.00, 0.00]
+      end
+    end
 
   end
 end
