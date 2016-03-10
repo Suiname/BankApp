@@ -17,8 +17,7 @@ describe Bank do
   describe '#accounts' do
     context 'many accounts' do
       before do
-        bank.accounts(account1)
-        bank.accounts(account2)
+        bank.accounts(account1, account2)
       end
       it 'can see all accounts' do
         expect(bank.accounts).to eq [account1, account2]
@@ -34,8 +33,7 @@ describe Bank do
   describe '#customers' do
     context 'open multiple accounts with different customers' do
       before do
-        bank.accounts(account1)
-        bank.accounts(account3)
+        bank.accounts(account1, account3)
       end
       it 'can see all people who have accounts' do
         expect(bank.customers).to eq [person1, person2]
