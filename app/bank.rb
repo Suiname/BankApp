@@ -6,12 +6,14 @@ class Bank
     @accounts = []
   end
 
-  def accounts
-    @accounts
-  end
-
-  def accounts(account)
-    @accounts.push(account)
+  def accounts(*args)
+    if args.size >= 1
+      args.each do |e|
+        @accounts.push(e)
+      end
+    else
+      @accounts
+    end
   end
 
 
